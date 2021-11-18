@@ -20,7 +20,6 @@ public class RotatingObstacle : MonoBehaviour
     void Update()
     {
         rot = Vector3.forward * (rotationSpeed * dir * Time.deltaTime * 100f);
-        Debug.Log(string.Format("Rotate to: [{0},{1},{2}]", rot.x, rot.y, rot.z));
         transform.Rotate(rot);
     }
 }
