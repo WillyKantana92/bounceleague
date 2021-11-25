@@ -87,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 4888516877884336045}
   speed: 3
+  rotateSpeed: 90
 --- !u!1 &5689154952335189832
 GameObject:
   m_ObjectHideFlags: 0
