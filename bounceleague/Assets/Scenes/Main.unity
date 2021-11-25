@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballRb: {fileID: 1009268515}
+  animDuration: 0.3
 --- !u!1001 &479265202911101643
 PrefabInstance:
   m_ObjectHideFlags: 0
