@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
     
     void FixedUpdate()
     {
-        Vector3 m = new Vector3(rot.x,rot.y,0);
+        Vector3 m = new Vector3(rot.x,0,rot.y);
         m = m.normalized * speed * Time.deltaTime;
         rigidbody.MovePosition(transform.position + m);
     }
