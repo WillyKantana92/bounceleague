@@ -41,14 +41,14 @@ public class Character : MonoBehaviour
     void FixedUpdate()
     {
         //move - left analog
-        Vector3 m = new Vector3(move.x,move.y,0);
+        Vector3 m = new Vector3(move.x,0,move.y);
         m = m.normalized * speed * Time.deltaTime;
         rigidBody.MovePosition(transform.position + m);
 
         //rotate - right analog
         lastRotation = rotation;
-        float aimAngle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.forward);
+        float aimAngle = Mathf.Atan2(-rotation.y, rotation.x) * Mathf.Rad2Deg;
+        aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
         Quaternion rotate = Quaternion.Slerp(rigidBody.transform.rotation, aimRotation, rotateSpeed * Time.time);
         rigidBody.MoveRotation(rotate);
         
