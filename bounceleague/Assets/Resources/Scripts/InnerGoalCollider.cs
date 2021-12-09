@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InnerGoalCollider : MonoBehaviour
 {
+    public Team teamGoalPost;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class InnerGoalCollider : MonoBehaviour
         if(other.name == "Ball")
         {
             TestBallScript ballScript = other.gameObject.GetComponent<TestBallScript>();
-            ballScript.OnGoal(transform.position);
+            ballScript.OnGoal(teamGoalPost, transform.position);
         }
     }
 }

@@ -14,6 +14,7 @@ public class TestBallScript : MonoBehaviour
     bool isAnimatingGoal;
     int force = 100;
     Vector3 initPos;
+    GameManager gameManager;
 
     void Awake()
     {
@@ -50,7 +51,12 @@ public class TestBallScript : MonoBehaviour
         }
     }
 
-    public void OnGoal(Vector3 goalPos)
+    public void Init(GameManager gameManagerIn)
+    {
+        gameManager = gameManagerIn;
+    }
+
+    public void OnGoal(Team team, Vector3 goalPos)
     {
         if(isAnimatingGoal) return;
         Debug.Log("Goal!!");
@@ -61,16 +67,16 @@ public class TestBallScript : MonoBehaviour
         Vector3 scaleTo = new Vector3(0.5f, 0.5f, 1);
         goalSeq.Join(transform.DOScale(scaleTo, animDuration).SetEase(Ease.InOutQuad));
         goalSeq.Join(transform.DOMove(goalPos, animDuration).SetEase(Ease.InOutQuad));
-        goalSeq.AppendCallback(OnGoalAnimFinish);
+        goalSeq.AppendCallback(delegate { OnGoalAnimFinish(team); });
     }
 
-    void OnGoalAnimFinish()
+    void OnGoalAnimFinish(Team team)
     {
-        ResetBall();
         isAnimatingGoal = false;
+        gameManager.OnGoal(team);
     }
 
-    void ResetBall()
+    public void ResetBall()
     {
         Debug.Log("Reset ball");
         
