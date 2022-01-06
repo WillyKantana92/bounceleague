@@ -32,6 +32,7 @@ public class TestBallScript : MonoBehaviour
     void Update()
     {
         if(isAnimatingGoal) return;
+        if(gameManager.currentGameState != GameState.Gameplay) return;
         
         if (Input.GetKeyDown(KeyCode.A))
         {
