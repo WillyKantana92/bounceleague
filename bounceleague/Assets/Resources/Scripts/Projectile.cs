@@ -7,14 +7,14 @@ public class Projectile : MonoBehaviour
 {
     public float destroyInSec;
     public float speed;
-    public Rigidbody rigidbody;
     float timerDestroy;
     Vector2 rot;
 
-    public void Init(Vector2 rotation)
+    public void Init(Vector2 rotation, Quaternion quaternion)
     {
         timerDestroy = destroyInSec;
         rot = rotation;
+        transform.localRotation = quaternion;
     }
 
     void Update()
@@ -28,8 +28,9 @@ public class Projectile : MonoBehaviour
     
     void FixedUpdate()
     {
-        Vector3 m = new Vector3(rot.x,0,rot.y);
-        m = m.normalized * speed * Time.deltaTime;
-        rigidbody.MovePosition(transform.position + m);
+        // Vector3 m = new Vector3(rot.x,0,rot.y);
+        // m = m.normalized * speed * Time.deltaTime;
+        // rigidbody.MovePosition(transform.position + m);
+        transform.Translate(Vector3.right * (Time.deltaTime * speed));
     }
 }

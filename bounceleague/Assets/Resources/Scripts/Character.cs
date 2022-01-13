@@ -61,10 +61,16 @@ public class Character : MonoBehaviour
 
         //rotate - right analog
         lastRotation = rotation;
-        float aimAngle = Mathf.Atan2(-rotation.y, rotation.x) * Mathf.Rad2Deg;
-        aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
-        Quaternion rotate = Quaternion.Slerp(rigidBody.transform.rotation, aimRotation, rotateSpeed * Time.time);
-        rigidBody.MoveRotation(rotate);
+        if(rotation.x != 0 ||
+           rotation.y != 0)
+        {
+            float aimAngle = Mathf.Atan2(-rotation.y, rotation.x) * Mathf.Rad2Deg;
+            aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
+            Quaternion rotate = Quaternion.Slerp(rigidBody.transform.rotation, aimRotation, rotateSpeed * Time.time);
+            // rigidBody.MoveRotation(rotate);
+            
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, aimRotation, speed);
+        }
 
         //shoot
         if(rotation.x > 0.5f ||
@@ -101,7 +107,7 @@ public class Character : MonoBehaviour
             Vector3 projectileSpawnPos = launcherPos.position;
             
             Projectile p = Instantiate(projectile.gameObject, projectileSpawnPos, aimRotation).GetComponent<Projectile>();
-            p.Init(rotation);
+            p.Init(rotation, transform.localRotation);
 
             shootTimer = shootPerSecond;
         }
