@@ -133,8 +133,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.11
-  m_Height: 0.3
+  m_Radius: 0.21
+  m_Height: 0.71
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3692000151584953854
@@ -149,6 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5d35c8f783e4d3390f3602cb6cb1ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collider: {fileID: 3692000151584953849}
   destroyInSec: 0.75
-  speed: 7
-  rigidbody: {fileID: 0}
+  speed: 4

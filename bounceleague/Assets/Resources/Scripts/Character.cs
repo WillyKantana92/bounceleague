@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.PlayerLoop;
 
@@ -15,11 +14,11 @@ public class Character : MonoBehaviour
     public float rotateSpeed;
     public float shootPerSecond;
     public string padName;
+    [HideInInspector] public Vector2 move;
+    [HideInInspector] public Vector2 rotation;
     GameManager gameManager;
     InputController inputController;
     Quaternion aimRotation;
-    Vector2 move;
-    Vector2 rotation;
     Vector2 lastRotation;
     float shootTimer;
 
@@ -32,16 +31,6 @@ public class Character : MonoBehaviour
         
         // inputController.Gameplay.Look.performed += ctx => rotation = ctx.ReadValue<Vector2>();
         // inputController.Gameplay.Look.canceled += ctx => rotation = lastRotation;
-    }
-
-    public void OnMove(InputAction.CallbackContext value)
-    {
-        move = value.ReadValue<Vector2>();
-    }
-    
-    public void OnLook(InputAction.CallbackContext value)
-    {
-        rotation = value.ReadValue<Vector2>();
     }
 
     public void Update()
@@ -69,7 +58,7 @@ public class Character : MonoBehaviour
             Quaternion rotate = Quaternion.Slerp(rigidBody.transform.rotation, aimRotation, rotateSpeed * Time.time);
             // rigidBody.MoveRotation(rotate);
             
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, aimRotation, speed);
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, aimRotation, rotateSpeed);
         }
 
         //shoot

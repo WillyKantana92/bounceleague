@@ -16,9 +16,9 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    [HideInInspector] public int characterIndex = 0;
     public TestBallScript ballScript;
-    public Character characterA;
-    public Character characterB;
+    public Character[] characters;
 
     [Header("Score")]
     public const int ScoreToWin = 3;
@@ -37,21 +37,6 @@ public class GameManager : MonoBehaviour
         ballScript.Init(this);
         gameFinishView.Initialize(this);
         RestartGame();
-    }
-
-    void FixedUpdate()
-    {
-        
-    }
-
-    void OnEnable()
-    {
-        
-    }
-
-    void OnDisable()
-    {
-        
     }
 
     public void OnGoal(Team team)

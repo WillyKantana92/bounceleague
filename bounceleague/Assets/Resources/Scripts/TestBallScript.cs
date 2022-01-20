@@ -12,7 +12,7 @@ public class TestBallScript : MonoBehaviour
     public float animDuration = 0.3f;
 
     bool isAnimatingGoal;
-    int force = 100;
+    int force = 60;
     Vector3 initPos;
     GameManager gameManager;
 
@@ -87,5 +87,10 @@ public class TestBallScript : MonoBehaviour
         Transform t = transform;
         t.localScale = Vector3.one;
         t.position = initPos;
+    }
+
+    public void ForceBall(Vector3 contactPoint)
+    {
+        ballRb.AddForce(contactPoint * force);
     }
 }

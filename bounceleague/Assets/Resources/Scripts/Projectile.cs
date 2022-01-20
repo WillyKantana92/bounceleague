@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public Collider collider;
     public float destroyInSec;
     public float speed;
     float timerDestroy;
@@ -32,5 +33,32 @@ public class Projectile : MonoBehaviour
         // m = m.normalized * speed * Time.deltaTime;
         // rigidbody.MovePosition(transform.position + m);
         transform.Translate(Vector3.right * (Time.deltaTime * speed));
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("Collision");
+        if(other.gameObject.tag == "ball")
+        {
+            Debug.Log("Ball Collision");
+            ContactPoint contact = other.contacts[0];
+            Vector3 point = contact.point;
+            other.gameObject.GetComponent<TestBallScript>().ForceBall(point);
+        }
+    }
+    
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Collider");
+        if(other.gameObject.tag == "wall")
+        {
+            Destroy(this.gameObject);
+        }
+
+        if(other.gameObject.tag == "ball")
+        {
+            Debug.Log("Ball Collider");
+            Destroy(this.gameObject);
+        }
     }
 }
