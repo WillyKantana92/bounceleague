@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 479265202858428454}
   - component: {fileID: 6110855387042705105}
   - component: {fileID: 5227110705302529743}
+  - component: {fileID: 3545701780497920949}
   m_Layer: 0
   m_Name: Collider3
   m_TagString: wall
@@ -774,6 +775,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &3545701780497920949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479265202858428455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &479265202864645764
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +879,7 @@ GameObject:
   - component: {fileID: 479265202900195909}
   - component: {fileID: 3950166866440579466}
   - component: {fileID: 6944925994612989060}
+  - component: {fileID: 102852644151127064}
   m_Layer: 0
   m_Name: Collider4
   m_TagString: wall
@@ -916,6 +930,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &102852644151127064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479265202900195910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &479265203271930125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,6 +1427,7 @@ GameObject:
   - component: {fileID: 479265203797004908}
   - component: {fileID: 2395178004560334871}
   - component: {fileID: 6433886458678427781}
+  - component: {fileID: 8905594166895251261}
   m_Layer: 0
   m_Name: Collider2
   m_TagString: wall
@@ -1451,6 +1478,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &8905594166895251261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479265203797004909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &479265203864229091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,6 +1544,7 @@ GameObject:
   - component: {fileID: 479265204258497182}
   - component: {fileID: 4953425368441084185}
   - component: {fileID: 5888706842450372022}
+  - component: {fileID: 8230217369450914458}
   m_Layer: 0
   m_Name: Collider1
   m_TagString: wall
@@ -1555,6 +1595,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &8230217369450914458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479265204258497183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &479265204263764061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1731,7 @@ GameObject:
   - component: {fileID: 959732775558161228}
   - component: {fileID: 1137401371709779599}
   - component: {fileID: 4146222754944622302}
+  - component: {fileID: 7858112497579414195}
   m_Layer: 0
   m_Name: 'Collider '
   m_TagString: wall
@@ -1729,6 +1782,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &7858112497579414195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425481689077573373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2172332323685242894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2288,7 @@ GameObject:
   - component: {fileID: 5306637850526354342}
   - component: {fileID: 1316836504436106944}
   - component: {fileID: 2513675777158096200}
+  - component: {fileID: 3363722853851289468}
   m_Layer: 0
   m_Name: Collider
   m_TagString: wall
@@ -2273,6 +2339,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &3363722853851289468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4681000176935730025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5421086446882545455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,6 +2473,7 @@ GameObject:
   - component: {fileID: 194367323087831631}
   - component: {fileID: 6435340174402998592}
   - component: {fileID: 6401807295853344471}
+  - component: {fileID: 1193801530165476279}
   m_Layer: 0
   m_Name: Collider
   m_TagString: wall
@@ -2445,6 +2524,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &1193801530165476279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962616503307031010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6457712828681357846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,9 +2546,10 @@ GameObject:
   m_Component:
   - component: {fileID: 420505611458200017}
   - component: {fileID: 544462061089894913}
-  - component: {fileID: 6923306169994924286}
   - component: {fileID: 7651406402695642078}
   - component: {fileID: 1043861876}
+  - component: {fileID: 6923306169994924286}
+  - component: {fileID: 75940393964278192}
   m_Layer: 0
   m_Name: RotatingObstacle2
   m_TagString: wall
@@ -2529,20 +2621,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6923306169994924286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6457712828681357846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f602b5db994f46e1a8a0d4d601c45eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 1
-  rotatingClockWise: 1
 --- !u!65 &7651406402695642078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2572,6 +2650,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &6923306169994924286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457712828681357846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f602b5db994f46e1a8a0d4d601c45eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
+  rotatingClockWise: 1
+--- !u!114 &75940393964278192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457712828681357846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7390192491055981043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,6 +2719,7 @@ GameObject:
   - component: {fileID: 1741644177230574763}
   - component: {fileID: 771708283503207743}
   - component: {fileID: 5323045851824446836}
+  - component: {fileID: 2547432551711330426}
   m_Layer: 0
   m_Name: Collider
   m_TagString: wall
@@ -2665,6 +2770,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
+--- !u!114 &2547432551711330426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166990054469257393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8570309550730223559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,9 +2792,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3364003827073572456}
   - component: {fileID: 5150062310183770861}
-  - component: {fileID: 5377369374764208784}
   - component: {fileID: 5480607784883633112}
   - component: {fileID: 894980640}
+  - component: {fileID: 5377369374764208784}
+  - component: {fileID: 4370249797705728385}
   m_Layer: 0
   m_Name: RotatingObstacle1
   m_TagString: wall
@@ -2749,20 +2867,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5377369374764208784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8570309550730223559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f602b5db994f46e1a8a0d4d601c45eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 1
-  rotatingClockWise: 0
 --- !u!65 &5480607784883633112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2792,6 +2896,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &5377369374764208784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8570309550730223559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f602b5db994f46e1a8a0d4d601c45eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
+  rotatingClockWise: 0
+--- !u!114 &4370249797705728385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8570309550730223559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356dfd0bfcdf46039ac447d58f7d459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8591354043541305527
 GameObject:
   m_ObjectHideFlags: 0

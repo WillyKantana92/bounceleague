@@ -35,14 +35,17 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         ballScript.Init(this);
+        foreach(Character character in characters)
+        {
+            character.Init(this);
+        }
         gameFinishView.Initialize(this);
-        RestartGame();
     }
 
     public void OnGoal(Team team)
     {
         currentGameState = GameState.Home;
-        ballScript.ResetBall();
+        ResetGameObj();
         
         if(team == Team.TeamA)
         {
@@ -102,5 +105,14 @@ public class GameManager : MonoBehaviour
     public void NextRound()
     {
         currentGameState = GameState.Gameplay;
+    }
+
+    void ResetGameObj()
+    {
+        ballScript.ResetBall();
+        foreach(Character character in characters)
+        {
+            character.ResetChar();
+        }
     }
 }

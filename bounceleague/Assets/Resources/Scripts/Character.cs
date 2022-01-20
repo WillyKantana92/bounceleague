@@ -22,15 +22,31 @@ public class Character : MonoBehaviour
     Vector2 lastRotation;
     float shootTimer;
 
+    Vector3 initPos;
+    Quaternion initRot;
+
     public void Awake()
     {
         inputController = new InputController();
-    
+        initPos = transform.position;
+        initRot = transform.rotation;
+
         // inputController.Gameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
         // inputController.Gameplay.Move.canceled += ctx => move = Vector2.zero;
-        
+
         // inputController.Gameplay.Look.performed += ctx => rotation = ctx.ReadValue<Vector2>();
         // inputController.Gameplay.Look.canceled += ctx => rotation = lastRotation;
+    }
+
+    public void Init(GameManager gameManagerIn)
+    {
+        gameManager = gameManagerIn;
+    }
+
+    public void ResetChar()
+    {
+        transform.position = initPos;
+        transform.rotation = initRot;
     }
 
     public void Update()
@@ -41,7 +57,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void CharacterController()
+    void CharacterController()
     {
         //move - left analog
         Vector3 m = new Vector3(move.x, 0, move.y);
@@ -76,6 +92,8 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(gameManager == null) return;
+        if(gameManager.currentGameState != GameState.Gameplay) return;
         CharacterController();
     }
 

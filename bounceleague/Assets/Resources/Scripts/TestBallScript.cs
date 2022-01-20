@@ -91,7 +91,6 @@ public class TestBallScript : MonoBehaviour
 
     public void ForceBall(Vector3 contactPoint)
     {
-        // ballRb.velocity = Vector3.zero;
         Vector3 direction = transform.position - contactPoint;
         ballRb.AddForceAtPosition(direction.normalized * force, contactPoint);
     }
