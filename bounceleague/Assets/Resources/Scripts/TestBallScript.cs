@@ -34,19 +34,19 @@ public class TestBallScript : MonoBehaviour
         if(isAnimatingGoal) return;
         if(gameManager.currentGameState != GameState.Gameplay) return;
         
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             ballRb.AddForce(Vector3.left * force);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             ballRb.AddForce(Vector3.back * force);
         }
-        else if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             ballRb.AddForce(Vector3.forward * force);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             ballRb.AddForce(Vector3.right * force);
         }

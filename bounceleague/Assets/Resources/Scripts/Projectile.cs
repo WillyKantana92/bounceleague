@@ -20,6 +20,8 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        transform.Translate(Vector3.right * (Time.deltaTime * speed));
+        
         timerDestroy -= 1 * Time.deltaTime;
         if(timerDestroy <= 0)
         {
@@ -32,7 +34,6 @@ public class Projectile : MonoBehaviour
         // Vector3 m = new Vector3(rot.x,0,rot.y);
         // m = m.normalized * speed * Time.deltaTime;
         // rigidbody.MovePosition(transform.position + m);
-        transform.Translate(Vector3.right * (Time.deltaTime * speed));
     }
 
     void OnCollisionEnter(Collision other)
