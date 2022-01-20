@@ -45,8 +45,9 @@ public class Character : MonoBehaviour
     {
         //move - left analog
         Vector3 m = new Vector3(move.x, 0, move.y);
-        m = m.normalized * speed * Time.deltaTime;
+        m = m.normalized * (speed * Time.fixedDeltaTime);
         rigidBody.MovePosition(transform.position + m);
+        // transform.position += m;
 
         //rotate - right analog
         lastRotation = rotation;
@@ -55,10 +56,9 @@ public class Character : MonoBehaviour
         {
             float aimAngle = Mathf.Atan2(-rotation.y, rotation.x) * Mathf.Rad2Deg;
             aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
-            Quaternion rotate = Quaternion.Slerp(rigidBody.transform.rotation, aimRotation, rotateSpeed * Time.time);
-            // rigidBody.MoveRotation(rotate);
-            
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, aimRotation, rotateSpeed);
+            Quaternion rotate = Quaternion.RotateTowards(transform.localRotation, aimRotation, rotateSpeed);
+            rigidBody.MoveRotation(rotate);
+            // transform.localRotation = rotate;
         }
 
         //shoot

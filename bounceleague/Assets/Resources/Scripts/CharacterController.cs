@@ -18,11 +18,13 @@ public class CharacterController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext value)
     {
+        if(character == null) return;
         character.move = value.ReadValue<Vector2>();
     }
     
     public void OnLook(InputAction.CallbackContext value)
     {
+        if(character == null) return;
         character.rotation = value.ReadValue<Vector2>();
     }
 }

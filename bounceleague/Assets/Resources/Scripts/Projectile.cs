@@ -38,20 +38,19 @@ public class Projectile : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         Debug.Log("Collision : " + other.gameObject.tag);
-        if(other.gameObject.tag == "ball")
+        
+        if(other.gameObject.CompareTag("ball"))
         {
             ContactPoint contact = other.contacts[0];
             Vector3 point = contact.point;
             other.gameObject.GetComponent<TestBallScript>().ForceBall(point);
             Destroy(this.gameObject);
         }
-        
-        if(other.gameObject.tag == "wall")
+        else if(other.gameObject.CompareTag("wall"))
         {
             Destroy(this.gameObject);
         }
-
-        if(other.gameObject.tag == "character")
+        else if(other.gameObject.CompareTag("character"))
         {
             Destroy(this.gameObject);
         }
