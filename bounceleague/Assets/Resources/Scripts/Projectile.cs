@@ -20,11 +20,11 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {   
-        timerDestroy -= 1 * Time.deltaTime;
-        if(timerDestroy <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        // timerDestroy -= 1 * Time.deltaTime;
+        // if(timerDestroy <= 0)
+        // {
+           //Destroy(this.gameObject);
+        // }
     }
     
     void FixedUpdate()
@@ -37,27 +37,17 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Collision");
+        Debug.Log("Collision : " + other.gameObject.tag);
         if(other.gameObject.tag == "ball")
         {
-            Debug.Log("Ball Collision");
             ContactPoint contact = other.contacts[0];
             Vector3 point = contact.point;
             other.gameObject.GetComponent<TestBallScript>().ForceBall(point);
-        }
-    }
-    
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Collider");
-        if(other.gameObject.tag == "wall")
-        {
             Destroy(this.gameObject);
         }
-
-        if(other.gameObject.tag == "ball")
+        
+        if(other.gameObject.tag == "wall")
         {
-            Debug.Log("Ball Collider");
             Destroy(this.gameObject);
         }
 

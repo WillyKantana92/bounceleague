@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 3692000151584953851}
   - component: {fileID: 3692000151584953849}
   - component: {fileID: 3692000151584953854}
+  - component: {fileID: 3156467228699010388}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -152,3 +153,19 @@ MonoBehaviour:
   collider: {fileID: 3692000151584953849}
   destroyInSec: 0.75
   speed: 4
+--- !u!54 &3156467228699010388
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692000151584953850}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

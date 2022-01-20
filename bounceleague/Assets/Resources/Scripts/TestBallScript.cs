@@ -12,7 +12,7 @@ public class TestBallScript : MonoBehaviour
     public float animDuration = 0.3f;
 
     bool isAnimatingGoal;
-    int force = 60;
+    int force = 100;
     Vector3 initPos;
     GameManager gameManager;
 
