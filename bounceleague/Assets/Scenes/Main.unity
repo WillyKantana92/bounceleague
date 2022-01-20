@@ -974,7 +974,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Field
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4092174543977347420, guid: 4abbb1c72cc9546789d40edd473cca98,
+        type: 3}
+      propertyPath: m_Force.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4092174543977347420, guid: 4abbb1c72cc9546789d40edd473cca98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4abbb1c72cc9546789d40edd473cca98, type: 3}
 --- !u!1001 &5013811952499270312
 PrefabInstance:
