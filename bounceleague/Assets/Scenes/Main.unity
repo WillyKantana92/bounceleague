@@ -979,6 +979,11 @@ PrefabInstance:
       propertyPath: m_Force.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5043779947982125240, guid: 4abbb1c72cc9546789d40edd473cca98,
+        type: 3}
+      propertyPath: ballCollider
+      value: 
+      objectReference: {fileID: 1009268516}
     m_RemovedComponents:
     - {fileID: 4092174543977347420, guid: 4abbb1c72cc9546789d40edd473cca98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4abbb1c72cc9546789d40edd473cca98, type: 3}

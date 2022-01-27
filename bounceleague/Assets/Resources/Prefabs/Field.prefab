@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 479265202330340493}
   - component: {fileID: 479265202330340494}
   - component: {fileID: 8801488649304647541}
+  - component: {fileID: 5043779947982125240}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -321,6 +322,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18, y: 11, z: 1}
   m_Center: {x: 0, y: 0, z: 0.5}
+--- !u!114 &5043779947982125240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479265202330340495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71a4d8ca7da94132905ab43ee625216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalColliders:
+  - {fileID: 8369894729251949736}
+  - {fileID: 930091688606947640}
+  - {fileID: 3794762352727716602}
+  - {fileID: 6319037700064183449}
+  ballCollider: {fileID: 0}
 --- !u!1 &479265202439107080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,7 +1905,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2172332323685242894}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.4
   m_Height: 2
@@ -1997,7 +2016,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2652236765546763100}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.4
   m_Height: 2
@@ -2140,7 +2159,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3454689774001033434}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.4
   m_Height: 2
@@ -2443,7 +2462,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5421086446882545455}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.4
   m_Height: 2
