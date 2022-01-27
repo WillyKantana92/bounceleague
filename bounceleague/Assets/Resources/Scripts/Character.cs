@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     public float speed;
     public float rotateSpeed;
     public float shootPerSecond;
+    public float stunTime;
     public string padName;
     [HideInInspector] public Vector2 move;
     [HideInInspector] public Vector2 rotation;
@@ -21,6 +22,8 @@ public class Character : MonoBehaviour
     Quaternion aimRotation;
     Vector2 lastRotation;
     float shootTimer;
+    float stunTimer;
+    bool isStun;
 
     Vector3 initPos;
     Quaternion initRot;
@@ -55,38 +58,53 @@ public class Character : MonoBehaviour
         {
             shootTimer -= Time.deltaTime;
         }
+
+        if(isStun && stunTimer > 0)
+        {
+            stunTimer -= Time.deltaTime;
+
+            if(stunTimer <= 0)
+            {
+                isStun = false;
+            }
+        }
     }
 
     void CharacterController()
     {
-        //move - left analog
-        Vector3 m = new Vector3(move.x, 0, move.y);
-        m = m.normalized * (speed * Time.fixedDeltaTime);
-        rigidBody.MovePosition(transform.position + m);
-        // transform.position += m;
+        if(!isStun)
+        {
+            //move - left analog
+            Vector3 m = new Vector3(move.x, 0, move.y);
+            m = m.normalized * (speed * Time.fixedDeltaTime);
+            rigidBody.MovePosition(transform.position + m);
 
-        //rotate - right analog
-        lastRotation = rotation;
-        if(rotation.x != 0 ||
-           rotation.y != 0)
-        {
-            float aimAngle = Mathf.Atan2(-rotation.y, rotation.x) * Mathf.Rad2Deg;
-            aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
-            Quaternion rotate = Quaternion.RotateTowards(transform.localRotation, aimRotation, rotateSpeed);
-            rigidBody.MoveRotation(rotate);
-            // transform.localRotation = rotate;
-        }
+            // transform.position += m;
 
-        //shoot
-        if(rotation.x > 0.5f ||
-           rotation.x < -0.5f)
-        {
-            Shoot();
-        }
-        else if(rotation.y > 0.5f ||
-                rotation.y < -0.5f)
-        {
-            Shoot();
+            //rotate - right analog
+            lastRotation = rotation;
+            if(rotation.x != 0 ||
+               rotation.y != 0)
+            {
+                float aimAngle = Mathf.Atan2(-rotation.y, rotation.x) * Mathf.Rad2Deg;
+                aimRotation = Quaternion.AngleAxis(aimAngle, Vector3.up);
+                Quaternion rotate = Quaternion.RotateTowards(transform.localRotation, aimRotation, rotateSpeed);
+                rigidBody.MoveRotation(rotate);
+
+                // transform.localRotation = rotate;
+            }
+
+            //shoot
+            if(rotation.x > 0.5f ||
+               rotation.x < -0.5f)
+            {
+                Shoot();
+            }
+            else if(rotation.y > 0.5f ||
+                    rotation.y < -0.5f)
+            {
+                Shoot();
+            }
         }
     }
 
@@ -117,6 +135,15 @@ public class Character : MonoBehaviour
             p.Init(rotation, transform.localRotation);
 
             shootTimer = shootPerSecond;
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("ball"))
+        {
+            isStun = true;
+            stunTimer = stunTime;
         }
     }
 }
