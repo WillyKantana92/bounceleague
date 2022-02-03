@@ -10,10 +10,12 @@ public class Character : MonoBehaviour
     public Projectile projectile;
     public Rigidbody rigidBody;
     public Transform launcherPos;
+    public Animator animator;
     public float speed;
     public float rotateSpeed;
     public float shootPerSecond;
     public float stunTime;
+    public float stunKnockForce;
     public string padName;
     [HideInInspector] public Vector2 move;
     [HideInInspector] public Vector2 rotation;
@@ -27,6 +29,7 @@ public class Character : MonoBehaviour
 
     Vector3 initPos;
     Quaternion initRot;
+    static readonly int Damage = Animator.StringToHash("damage");
 
     public void Awake()
     {
@@ -145,6 +148,12 @@ public class Character : MonoBehaviour
         {
             isStun = true;
             stunTimer = stunTime;
+            animator.SetTrigger(Damage);
+            
+            ContactPoint contact = other.contacts[0];
+            Vector3 point = contact.point;
+            Vector3 direction = transform.position - point;
+            rigidBody.AddForceAtPosition(direction.normalized * stunKnockForce, point);
         }
     }
 }
