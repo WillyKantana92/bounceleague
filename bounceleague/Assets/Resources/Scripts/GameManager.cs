@@ -12,7 +12,7 @@ public enum Team
 
 public enum GameState
 {
-    Home, Gameplay
+    Home, Join, Gameplay
 }
 
 public class GameManager : MonoBehaviour
@@ -106,13 +106,19 @@ public class GameManager : MonoBehaviour
         characterIndex++;
         if(characterIndex >= 2)
         {
-            gameStart = true;
-            assignPlayerView.Hide();
+            assignPlayerView.UpdateAssignInfo(characterIndex-1);
+            assignPlayerView.ShowStart();
         }
         else
         {
-            assignPlayerView.UpdateAssignInfo();
+            assignPlayerView.UpdateAssignInfo(characterIndex-1);
         }
+    }
+
+    public void GameStart()
+    {
+        gameStart = true;
+        currentGameState = GameState.Gameplay;
     }
 
     public void RestartGame()
@@ -121,12 +127,15 @@ public class GameManager : MonoBehaviour
         teamBScore = 0;
         RefreshScoreText();
         playerInputManager.enabled = true;
-        currentGameState = GameState.Gameplay;
 
         if(characterIndex < 2)
         {
+            currentGameState = GameState.Join;
             assignPlayerView.Show();
-            assignPlayerView.UpdateAssignInfo();
+        }
+        else
+        {
+            currentGameState = GameState.Gameplay;
         }
     }
 
