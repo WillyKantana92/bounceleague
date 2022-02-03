@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public enum Team
@@ -28,9 +29,12 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public Text scoreText;
     public GameFinishView gameFinishView;
+    public AssignPlayerView assignPlayerView;
     
     Vector2 move;
     public GameState currentGameState;
+    public PlayerInputManager playerInputManager; 
+    public bool gameStart;
 
     void Awake()
     {
@@ -40,6 +44,8 @@ public class GameManager : MonoBehaviour
             character.Init(this);
         }
         gameFinishView.Initialize(this);
+        assignPlayerView.DoInit(this);
+        assignPlayerView.Hide();
     }
 
     public void OnGoal(Team team)
@@ -94,12 +100,34 @@ public class GameManager : MonoBehaviour
         scoreText.text = string.Format("{0} - {1}", teamAScore, teamBScore);
     }
 
+    public void AssignPlayer()
+    {
+        characters[characterIndex].gameObject.SetActive(true);
+        characterIndex++;
+        if(characterIndex >= 2)
+        {
+            gameStart = true;
+            assignPlayerView.Hide();
+        }
+        else
+        {
+            assignPlayerView.UpdateAssignInfo();
+        }
+    }
+
     public void RestartGame()
     {
         teamAScore = 0;
         teamBScore = 0;
         RefreshScoreText();
+        playerInputManager.enabled = true;
         currentGameState = GameState.Gameplay;
+
+        if(characterIndex < 2)
+        {
+            assignPlayerView.Show();
+            assignPlayerView.UpdateAssignInfo();
+        }
     }
 
     public void NextRound()

@@ -93,7 +93,7 @@ MonoBehaviour:
   launcherPos: {fileID: 3790684535925744254}
   speed: 3
   rotateSpeed: 10
-  shootPerSecond: 0.35
+  shootPerSecond: 0.5
   stunTime: 2
   padName: 
   move: {x: 0, y: 0}

@@ -13,7 +13,7 @@ public class CharacterController : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         character = gameManager.characters[gameManager.characterIndex];
-        gameManager.characterIndex++;
+        gameManager.AssignPlayer();
     }
 
     public void OnMove(InputAction.CallbackContext value)

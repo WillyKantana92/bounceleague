@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2e602293a234b678e03e38a21110a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamGoalPost: 0
+  teamGoalPost: 1
 --- !u!1 &479265202189702048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2e602293a234b678e03e38a21110a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamGoalPost: 1
+  teamGoalPost: 0
 --- !u!1 &4580665810270750784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,7 +2295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2e602293a234b678e03e38a21110a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamGoalPost: 0
+  teamGoalPost: 1
 --- !u!1 &4681000176935730025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,7 +2668,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &6923306169994924286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2914,7 +2914,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5377369374764208784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2999,4 +2999,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2e602293a234b678e03e38a21110a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamGoalPost: 1
+  teamGoalPost: 0

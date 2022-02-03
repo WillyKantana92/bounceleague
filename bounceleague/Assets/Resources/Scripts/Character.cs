@@ -112,6 +112,7 @@ public class Character : MonoBehaviour
     {
         if(gameManager == null) return;
         if(gameManager.currentGameState != GameState.Gameplay) return;
+        if(!gameManager.gameStart) return;
         CharacterController();
     }
 

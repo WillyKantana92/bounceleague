@@ -50,7 +50,7 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Left Stick"",
                     ""id"": ""d0ee7a1c-2338-4d85-8d86-65d747bf5af3"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -160,7 +160,7 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Right Stick"",
                     ""id"": ""3990d3d5-e007-4a81-8390-5d130ef4ff18"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
