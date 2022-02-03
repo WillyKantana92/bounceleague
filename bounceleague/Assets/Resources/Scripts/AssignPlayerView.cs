@@ -8,18 +8,36 @@ public class AssignPlayerView : MonoBehaviour
 {
     public Transform overlay;
     public Transform popup;
-    public TextMeshProUGUI title;
+    public Button startButton;
+    public List<Image> readyIndicators;
 
     GameManager gameManager;
 
     public void DoInit(GameManager inGameManager)
     {
         gameManager = inGameManager;
+        for(int i = 0; i < readyIndicators.Count; i++)
+        {
+            readyIndicators[i].color = Color.red;
+        }
+        startButton.onClick.AddListener(OnStartButton);
+        startButton.gameObject.SetActive(false);
     }
 
-    public void UpdateAssignInfo()
+    public void UpdateAssignInfo(int index)
     {
-        title.text = string.Format("Player {0}\nPress any key to join", (gameManager.characterIndex + 1));
+        readyIndicators[index].color = Color.green;
+    }
+
+    public void OnStartButton()
+    {
+        Hide();
+        gameManager.GameStart();
+    }
+
+    public void ShowStart()
+    {
+        startButton.gameObject.SetActive(true);
     }
 
     public void Show()
