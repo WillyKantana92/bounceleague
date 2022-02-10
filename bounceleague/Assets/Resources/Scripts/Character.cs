@@ -139,6 +139,7 @@ public class Character : MonoBehaviour
             p.Init(gameManager, rotation, transform.localRotation);
 
             shootTimer = shootPerSecond;
+            gameManager.soundManager.PlaySfx(SFXEnum.Shoot);
         }
     }
 
@@ -156,6 +157,8 @@ public class Character : MonoBehaviour
             Vector3 point = contact.point;
             Vector3 direction = point - transform.position;
             rigidBody.AddForceAtPosition(direction.normalized * -stunKnockForce, point);
+            gameManager.soundManager.PlaySfx(SFXEnum.BallHit);
+            gameManager.soundManager.PlaySfx(SFXEnum.PlayerHit);
         }
     }
 }

@@ -7,7 +7,10 @@ public enum SFXEnum
 {
     BGM_01,
     
-    PlayerHit, Goal
+    PlayerHit, 
+    Goal,
+    BallHit,
+    Shoot
 }
 
 [Serializable]

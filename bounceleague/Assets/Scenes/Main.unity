@@ -168,11 +168,15 @@ MonoBehaviour:
   sfx: {fileID: 1825974399}
   audioList:
   - audioType: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 81e7378f9074e48dcb167f069da8a273, type: 3}
   - audioType: 1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f02011537bd8b47ef9e601820593e5e3, type: 3}
   - audioType: 2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 439eb57d7e9f54e509b36094856f6bf9, type: 3}
+  - audioType: 3
+    audioClip: {fileID: 8300000, guid: 68966debbec3b4d9cadaf506a38b08ae, type: 3}
+  - audioType: 4
+    audioClip: {fileID: 8300000, guid: 214ca9919f2e2459caae334694e47b5c, type: 3}
 --- !u!1001 &108692229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1285,7 +1289,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0

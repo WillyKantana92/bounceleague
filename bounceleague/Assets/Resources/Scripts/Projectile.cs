@@ -54,6 +54,7 @@ public class Projectile : MonoBehaviour
             ContactPoint contact = other.contacts[0];
             Vector3 point = contact.point;
             other.gameObject.GetComponent<TestBallScript>().ForceBall(point);
+            gameManager.soundManager.PlaySfx(SFXEnum.BallHit);
             Destroy(this.gameObject);
         }
         else if(other.gameObject.CompareTag("wall"))
