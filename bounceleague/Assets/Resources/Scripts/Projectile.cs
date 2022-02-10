@@ -30,11 +30,8 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {   
-        // timerDestroy -= 1 * Time.deltaTime;
-        // if(timerDestroy <= 0)
-        // {
-           //Destroy(this.gameObject);
-        // }
+         timerDestroy -= Time.deltaTime;
+         if(timerDestroy <= 0) Destroy(this.gameObject);
     }
     
     void FixedUpdate()

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4888516877884336045}
   - component: {fileID: 3709766129371733364}
   - component: {fileID: 295093105463988960}
+  - component: {fileID: 2165762235606590795}
   m_Layer: 0
   m_Name: Character
   m_TagString: character
@@ -172,6 +173,7 @@ MonoBehaviour:
   projectile: {fileID: 3692000151584953854, guid: 1fce807d16598446ba3eab4227458a77,
     type: 3}
   rigidBody: {fileID: 4888516877884336045}
+  constantForce: {fileID: 2165762235606590795}
   launcherPos: {fileID: 3790684535925744254}
   animator: {fileID: 295093105463988960}
   speed: 3
@@ -201,6 +203,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!75 &2165762235606590795
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5689154951092724420}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &5689154952335189832
 GameObject:
   m_ObjectHideFlags: 0

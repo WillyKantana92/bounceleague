@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
 {
     public Projectile projectile;
     public Rigidbody rigidBody;
+    public ConstantForce constantForce;
     public Transform launcherPos;
     public Animator animator;
     public float speed;
@@ -30,7 +31,7 @@ public class Character : MonoBehaviour
     Vector3 initPos;
     Quaternion initRot;
     static readonly int Damage = Animator.StringToHash("damage");
-
+    
     public void Awake()
     {
         inputController = new InputController();

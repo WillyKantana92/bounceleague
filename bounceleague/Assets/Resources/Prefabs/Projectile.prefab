@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 3692000151584953849}
-  destroyInSec: 0.75
+  destroyInSec: 1.25
   speed: 4
 --- !u!54 &3156467228699010388
 Rigidbody:
