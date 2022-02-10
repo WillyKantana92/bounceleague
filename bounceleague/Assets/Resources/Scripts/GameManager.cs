@@ -30,7 +30,11 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public GameFinishView gameFinishView;
     public AssignPlayerView assignPlayerView;
+
+    [Header("Sound")]
+    public SoundManager soundManager;
     
+    [Header("Game")]
     Vector2 move;
     public GameState currentGameState;
     public PlayerInputManager playerInputManager; 
@@ -38,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        soundManager.Initialize();
         ballScript.Init(this);
         foreach(Character character in characters)
         {
