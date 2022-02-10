@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
                 gameFinishView.SetTitle("Team A Won!!");
                 gameFinishView.ShowButtons(true);
                 gameFinishView.Show();
+                soundManager.PlaySfx(SFXEnum.Goal);
             }
             else
             {
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
                 gameFinishView.SetTitle("Point for Team A");
                 gameFinishView.ShowButtons(false);
                 gameFinishView.Show();
+                soundManager.PlaySfx(SFXEnum.Goal);
             }
         }
         else
@@ -125,6 +127,7 @@ public class GameManager : MonoBehaviour
     {
         gameStart = true;
         currentGameState = GameState.Gameplay;
+        soundManager.PlayBGM();
     }
 
     public void RestartGame()

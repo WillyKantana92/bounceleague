@@ -94,4 +94,12 @@ public class TestBallScript : MonoBehaviour
         Vector3 direction = transform.position - contactPoint;
         ballRb.AddForceAtPosition(direction.normalized * force, contactPoint);
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("wall"))
+        {
+            gameManager.soundManager.PlaySfx(SFXEnum.BallHit);
+        }
+    }
 }
