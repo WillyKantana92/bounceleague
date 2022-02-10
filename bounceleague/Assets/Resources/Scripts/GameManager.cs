@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
     
     Vector2 move;
     public GameState currentGameState;
-    public PlayerInputManager playerInputManager; 
+    public PlayerInputManager playerInputManager;
+    public FieldController fieldController;
     public bool gameStart;
 
     void Awake()

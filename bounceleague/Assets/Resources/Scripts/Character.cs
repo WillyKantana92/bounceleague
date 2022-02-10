@@ -136,7 +136,7 @@ public class Character : MonoBehaviour
             Vector3 projectileSpawnPos = launcherPos.position;
             
             Projectile p = Instantiate(projectile.gameObject, projectileSpawnPos, aimRotation).GetComponent<Projectile>();
-            p.Init(rotation, transform.localRotation);
+            p.Init(gameManager, rotation, transform.localRotation);
 
             shootTimer = shootPerSecond;
         }
@@ -150,10 +150,12 @@ public class Character : MonoBehaviour
             stunTimer = stunTime;
             animator.SetTrigger(Damage);
             
+            rigidBody.velocity = Vector3.zero;
+
             ContactPoint contact = other.contacts[0];
             Vector3 point = contact.point;
-            Vector3 direction = transform.position - point;
-            rigidBody.AddForceAtPosition(direction.normalized * stunKnockForce, point);
+            Vector3 direction = point - transform.position;
+            rigidBody.AddForceAtPosition(direction.normalized * -stunKnockForce, point);
         }
     }
 }
