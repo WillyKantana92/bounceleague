@@ -134,7 +134,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5689154951092724420}
-  m_Material: {fileID: 13400000, guid: d2fc837310f0a425fb9501a0d8624996, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.32
@@ -178,7 +178,7 @@ MonoBehaviour:
   rotateSpeed: 10
   shootPerSecond: 0.5
   stunTime: 1
-  stunKnockForce: 50
+  stunKnockForce: 200
   padName: 
   move: {x: 0, y: 0}
   rotation: {x: 0, y: 0}

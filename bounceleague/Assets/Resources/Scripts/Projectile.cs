@@ -11,11 +11,21 @@ public class Projectile : MonoBehaviour
     float timerDestroy;
     Vector2 rot;
 
-    public void Init(Vector2 rotation, Quaternion quaternion)
+    GameManager gameManager;
+
+    public void Init(GameManager inGameManager, Vector2 rotation, Quaternion quaternion)
     {
+        gameManager = inGameManager;
+        
         timerDestroy = destroyInSec;
         rot = rotation;
         transform.localRotation = quaternion;
+        
+        int goalLength = gameManager.fieldController.goalColliders.Length;
+        for(int i = 0; i < goalLength; i++)
+        {
+            Physics.IgnoreCollision(gameManager.fieldController.goalColliders[i],collider,true);
+        }
     }
 
     void Update()
