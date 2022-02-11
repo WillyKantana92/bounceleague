@@ -17,7 +17,7 @@ public class AreaEffector : MonoBehaviour
     {
         Debug.Log("Trigger : " + other.gameObject.tag);
         
-        if(other.gameObject.CompareTag("character"))
+        if(other.gameObject.CompareTag("ball"))
         {
             Vector3 dir = Vector3.right;
             switch(direction)
@@ -27,8 +27,8 @@ public class AreaEffector : MonoBehaviour
                 case Direction.Up:    dir = Vector3.forward; break;
                 case Direction.Down:  dir = Vector3.back; break;
             }
-            Character player = other.gameObject.GetComponent<Character>();
-            player.constantForce.force = dir * force;
+            TestBallScript ball = other.gameObject.GetComponent<TestBallScript>();
+            ball.constantForceModifier.force = dir * force;
         }
     }
 
@@ -36,10 +36,10 @@ public class AreaEffector : MonoBehaviour
     {
         Debug.Log("Trigger : " + other.gameObject.tag);
         
-        if(other.gameObject.CompareTag("character"))
+        if(other.gameObject.CompareTag("ball"))
         {
-            Character player = other.gameObject.GetComponent<Character>();
-            player.constantForce.force = Vector3.zero;
+            TestBallScript ball = other.gameObject.GetComponent<TestBallScript>();
+            ball.constantForceModifier.force = Vector3.zero;
         }
     }
 }

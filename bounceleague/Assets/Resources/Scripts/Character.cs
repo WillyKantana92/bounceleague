@@ -9,7 +9,6 @@ public class Character : MonoBehaviour
 {
     public Projectile projectile;
     public Rigidbody rigidBody;
-    public ConstantForce constantForce;
     public Transform launcherPos;
     public Animator animator;
     public float speed;

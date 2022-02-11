@@ -669,6 +669,7 @@ GameObject:
   - component: {fileID: 1009268515}
   - component: {fileID: 1009268516}
   - component: {fileID: 1009268519}
+  - component: {fileID: 1009268520}
   m_Layer: 0
   m_Name: Ball
   m_TagString: ball
@@ -782,7 +783,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballRb: {fileID: 1009268515}
+  constantForceModifier: {fileID: 1009268520}
   animDuration: 0.3
+--- !u!75 &1009268520
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009268514}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1001 &1157486813
 PrefabInstance:
   m_ObjectHideFlags: 0

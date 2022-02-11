@@ -7,6 +7,7 @@ using UnityEngine;
 public class TestBallScript : MonoBehaviour
 {
     public Rigidbody ballRb;
+    public ConstantForce constantForceModifier;
 
     [Header("Goal Animation")]
     public float animDuration = 0.3f;
